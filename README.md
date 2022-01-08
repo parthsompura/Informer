@@ -1,17 +1,8 @@
 # Informer: Beyond Efficient Transformer for Long Sequence Time-Series Forecasting (AAAI'21 Best Paper)
-![Python 3.6](https://img.shields.io/badge/python-3.6-green.svg?style=plastic)
-![PyTorch 1.2](https://img.shields.io/badge/PyTorch%20-%23EE4C2C.svg?style=plastic)
-![cuDNN 7.3.1](https://img.shields.io/badge/cudnn-7.3.1-green.svg?style=plastic)
-![License CC BY-NC-SA](https://img.shields.io/badge/license-CC_BY--NC--SA--green.svg?style=plastic)
 
 This is the origin Pytorch implementation of Informer in the following paper: 
 [Informer: Beyond Efficient Transformer for Long Sequence Time-Series Forecasting](https://arxiv.org/abs/2012.07436). Special thanks to `Jieqi Peng`@[cookieminions](https://github.com/cookieminions) for building this repo.
 
-:triangular_flag_on_post:**News**(Mar 25, 2021): We update all experiment [results](#resultslink) with hyperparameter settings.
-
-:triangular_flag_on_post:**News**(Feb 22, 2021): We provide [Colab Examples](#colablink) for friendly usage.
-
-:triangular_flag_on_post:**News**(Feb 8, 2021): Our Informer paper has been awarded [AAAI'21 Best Paper \[Official\]](https://aaai.org/Conferences/AAAI-21/aaai-outstanding-and-distinguished-papers/)[\[Beihang\]](http://scse.buaa.edu.cn/info/1097/7443.htm)[\[Rutgers\]](https://www.business.rutgers.edu/news/hui-xiong-and-research-colleagues-receive-aaai-best-paper-award)! We will continue this line of research and update on this repo. Please star this repo and [cite](#citelink) our paper if you find our work is helpful for you.
 
 <p align="center">
 <img src=".\img\informer.png" height = "360" alt="" align=center />
@@ -176,36 +167,4 @@ Besides, the experiment parameters of each data set are formated in the `.sh` fi
 </p>
 
 
-## FAQ
-If you run into a problem like `RuntimeError: The size of tensor a (98) must match the size of tensor b (96) at non-singleton dimension 1`, you can check torch version or modify code about `Conv1d` of `TokenEmbedding` in `models/embed.py` as the way of circular padding mode in Conv1d changed in different torch versions.
 
-
-## <span id="citelink">Citation</span>
-If you find this repository useful in your research, please consider citing the following paper:
-
-```
-@inproceedings{haoyietal-informer-2021,
-  author    = {Haoyi Zhou and
-               Shanghang Zhang and
-               Jieqi Peng and
-               Shuai Zhang and
-               Jianxin Li and
-               Hui Xiong and
-               Wancai Zhang},
-  title     = {Informer: Beyond Efficient Transformer for Long Sequence Time-Series Forecasting},
-  booktitle = {The Thirty-Fifth {AAAI} Conference on Artificial Intelligence, {AAAI} 2021, Virtual Conference},
-  volume    = {35},
-  number    = {12},
-  pages     = {11106--11115},
-  publisher = {{AAAI} Press},
-  year      = {2021},
-}
-```
-
-## Contact
-If you have any questions, feel free to contact Haoyi Zhou through Email (zhouhaoyi1991@gmail.com) or Github issues. Pull requests are highly welcomed!
-
-## Acknowlegements
-Thanks for the computing infrastructure provided by Beijing Advanced Innovation Center for Big Data and Brain Computing ([BDBC](http://bdbc.buaa.edu.cn/)).
-At the same time, thank you all for your attention to this work! [![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fzhouhaoyi%2FInformer2020&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=Hits+Count&edge_flat=false)](https://hits.seeyoufarm.com)
-[![Stargazers repo roster for @zhouhaoyi/Informer2020](https://reporoster.com/stars/zhouhaoyi/Informer2020)](https://github.com/zhouhaoyi/Informer2020/stargazers)
